@@ -9,6 +9,7 @@ const theme = {
   },
   colors: {
     ...roboto.colors,
+    white: "#fff",
     light: "#f5f5f5",
     dark: "#111",
   },
@@ -17,6 +18,14 @@ const theme = {
       bg: "light",
       color: "dark",
       fontWeight: "bolder",
+      "&:hover": {
+        bg: "dark",
+        color: "light",
+      },
+    },
+    link: {
+      bg: "transparent",
+      color: "dark",
     },
   },
   styles: {

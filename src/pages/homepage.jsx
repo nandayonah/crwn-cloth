@@ -1,12 +1,13 @@
 /** @jsx jsx */
+import Container from "components/container"
 import Directory from "components/directory"
-import { Box, jsx } from "theme-ui"
+import { jsx } from "theme-ui"
 
 const Homepage = () => {
   return (
-    <Box sx={{ variant: "container" }}>
+    <Container>
       <Directory />
-    </Box>
+    </Container>
   )
 }
 

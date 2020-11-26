@@ -3,7 +3,7 @@ import { Box, Button, Flex, jsx } from "theme-ui"
 import PropTypes from "prop-types"
 import { useHistory, useRouteMatch } from "react-router-dom"
 
-const MenuItem = ({ id, title, image }) => {
+const MenuItem = ({ id, title, imageUrl }) => {
   const history = useHistory()
   const match = useRouteMatch()
 
@@ -12,7 +12,7 @@ const MenuItem = ({ id, title, image }) => {
       sx={{
         minHeight: "150px",
         borderRadius: 2,
-        background: `url(${image})`,
+        background: `url(${imageUrl})`,
       }}
     >
       <Flex sx={{ alignItems: "center", pl: 3, pt: 3 }}>
@@ -30,7 +30,7 @@ const MenuItem = ({ id, title, image }) => {
 MenuItem.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
 }
 
 export default MenuItem
