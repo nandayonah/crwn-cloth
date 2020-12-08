@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import CollectionPreview from "components/collections-preview"
-import Container from "components/container"
 import { useState } from "react"
 import shopData from "shop-data"
-import { Box, Divider, jsx } from "theme-ui"
+import { Box, Container, Divider, jsx } from "theme-ui"
 
 const ShopPage = () => {
   const [collections, setCollections] = useState(shopData)
@@ -13,10 +12,10 @@ const ShopPage = () => {
       <h1>Popular Picks</h1>
 
       <Box>
-        {collections.map(({ id, ...otherProps }) => (
+        {collections.map(({ id, ...otherProps }, idx) => (
           <Box key={id}>
             <CollectionPreview id={id} {...otherProps} />
-            <Divider />
+            {idx !== collections.length - 1 && <Divider />}
           </Box>
         ))}
       </Box>

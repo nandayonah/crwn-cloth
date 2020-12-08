@@ -12,15 +12,43 @@ const theme = {
     white: "#fff",
     light: "#f5f5f5",
     dark: "#111",
+    muted: "#898989",
+    warning: "#ffc107",
+  },
+  forms: {
+    label: {
+      fontSize: 1,
+      fontWeight: "bold",
+    },
+  },
+  alerts: {
+    warning: {
+      bg: "warning",
+    },
   },
   buttons: {
     primary: {
       bg: "light",
       color: "dark",
-      fontWeight: "bolder",
       "&:hover": {
         bg: "dark",
         color: "light",
+      },
+    },
+    secondary: {
+      bg: "dark",
+      color: "light",
+      "&:hover": {
+        bg: "light",
+        color: "dark",
+      },
+    },
+    accent: {
+      bg: "primary",
+      color: "white",
+      "&:hover": {
+        bg: "white",
+        color: "dark",
       },
     },
     link: {

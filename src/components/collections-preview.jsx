@@ -16,10 +16,12 @@ const CollectionPreview = ({ id, title, items }) => {
         </Link>
       </Flex>
 
-      <Grid gap={1} columns={5} width={200}>
-        {items.splice(0, 5).map((item) => (
-          <Product product={item} key={item.id} />
-        ))}
+      <Grid gap={1} columns={[1, 5, 5]} width={200}>
+        {items
+          .filter((_, idx) => idx <= 4)
+          .map((item) => (
+            <Product product={item} key={item.id} />
+          ))}
       </Grid>
     </Box>
   )

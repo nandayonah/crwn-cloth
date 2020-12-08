@@ -38,7 +38,7 @@ const Directory = () => {
   const [menuItems, setMenuItems] = useState(categories)
 
   return (
-    <Grid gap={4} columns={2}>
+    <Grid gap={[2, 4, 4]} columns={[1, 2, 2]}>
       {menuItems.map((menu) => (
         <MenuItem key={menu.id} {...menu} />
       ))}
